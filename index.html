@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atelier North — Digital Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070706;--fg:#f2eee5;--gold:#d1ad6b;--muted:#8c877d;--line:#d8b76d2c}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:13px "DM Sans",sans-serif}a{text-decoration:none;color:inherit}.intro{position:fixed;inset:0;background:#050504;z-index:99;display:grid;place-items:center;overflow:hidden;transition:1s}.intro.hide{opacity:0;visibility:hidden;pointer-events:none}.introGlow{position:absolute;width:55vw;height:55vw;border-radius:50%;background:radial-gradient(circle,#d1ad6b1c 0%,transparent 68%);filter:blur(12px);animation:introPulse 3.8s ease-in-out infinite}.introContent{position:relative;text-align:center;z-index:2;animation:introRise 1.2s ease both}.introLine{width:0;height:1px;background:var(--gold);margin:0 auto 22px;animation:introLine 1.4s .2s ease forwards}.introKicker{font-size:8px;letter-spacing:.38em;color:#a69f91;text-transform:uppercase;opacity:0;animation:introFade 1s .45s ease forwards}.introTitle{margin-top:18px;font:500 clamp(52px,7vw,105px)/.82 "Cormorant Garamond";letter-spacing:-.04em;color:var(--fg);opacity:0;animation:introFade 1.2s .7s ease forwards}.introTitle em{color:var(--gold);font-style:italic}.introSub{margin-top:24px;font-size:7px;letter-spacing:.28em;color:#716b60;opacity:0;animation:introFade 1s 1s ease forwards}.introProgress{width:150px;height:1px;background:#ffffff18;margin:35px auto 0;overflow:hidden;opacity:0;animation:introFade 1s 1.15s ease forwards}.introProgress span{display:block;height:100%;width:0;background:var(--gold);animation:introLoad 3.2s 1.1s ease forwards}.skip{position:absolute;right:25px;bottom:25px;background:#0008;color:white;border:1px solid #fff3;padding:10px 14px;letter-spacing:.15em;font-size:8px;cursor:pointer;z-index:3}@keyframes introRise{from{transform:translateY(18px)}to{transform:translateY(0)}}@keyframes introFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes introLine{to{width:70px}}@keyframes introLoad{to{width:100%}}@keyframes introPulse{0%,100%{transform:scale(.9);opacity:.7}50%{transform:scale(1.08);opacity:1}}.nav{position:fixed;z-index:20;top:0;left:0;right:0;height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(#070706f5,transparent)}.brand{font-size:11px;letter-spacing:.2em}.brand b{color:var(--gold)}.links{display:flex;gap:30px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#bbb5a8}.links a:hover{color:var(--gold)}.cta{border:1px solid #d1ad6b80;background:none;color:var(--gold);padding:11px 16px;font-size:8px;letter-spacing:.12em;text-transform:uppercase}.hero{min-height:100vh;padding:145px 5vw 70px;overflow:hidden;background:radial-gradient(circle at 78% 45%,#4b382044,transparent 25%),#070706}.heroIn{max-width:1350px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:4vw}.eyebrow,.kicker{color:var(--gold);font-size:8px;letter-spacing:.25em;text-transform:uppercase}.hero h1{font:500 clamp(72px,9vw,145px)/.78 "Cormorant Garamond";letter-spacing:-.06em;margin:25px 0}.hero h1 em{color:var(--gold);font-style:italic}.copy{max-width:530px;color:#a39d91;line-height:1.8}.buttons{display:flex;gap:12px;margin-top:32px}.gold,.outline{padding:14px 18px;font-size:8px;letter-spacing:.14em;text-transform:uppercase}.gold{background:var(--gold);color:#080706}.outline{border:1px solid #fff3}.stage{height:600px;position:relative}.glow{position:absolute;width:430px;height:430px;border-radius:50%;background:#d1ad6b12;filter:blur(30px);left:25%;top:15%}.laptop{position:absolute;left:7%;top:13%;width:590px;height:350px;background:#090908;border:7px solid #292722;border-radius:10px;transform:rotateY(-10deg) rotateZ(-2deg);box-shadow:0 45px 90px #000c}.screen{position:absolute;inset:11px;background:linear-gradient(135deg,#101311,#2b2418);padding:35px}.screen small{color:var(--gold);letter-spacing:.2em}.screen h2{font:500 56px/.82 "Cormorant Garamond";margin-top:65px}.screen h2 i{color:var(--gold)}.phone{position:absolute;right:6%;bottom:13%;width:160px;height:315px;border:6px solid #292722;border-radius:25px;background:#0a0908;transform:rotate(7deg);z-index:2;box-shadow:0 35px 70px #000c}.phoneIn{position:absolute;inset:9px;border-radius:17px;background:linear-gradient(150deg,#15120d,#574327);padding:20px}.phoneIn h3{font:500 34px/.82 "Cormorant Garamond";margin-top:70px}.section{max-width:1400px;margin:auto;padding:130px 5vw}.head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:50px}.head h2{font:500 64px/.82 "Cormorant Garamond";margin:10px 0 0}.head p{max-width:350px;color:#7f7a70;font-size:10px;line-height:1.7}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2px;background:var(--line)}.card{min-height:430px;background:#090908;position:relative;overflow:hidden;cursor:pointer;transition:.4s}.card.big{grid-row:span 2;min-height:860px}.card:hover{transform:translateY(-5px);box-shadow:0 35px 70px #000b}.card:hover .visual{transform:scale(1.035)}.visual{transition:transform .7s ease}.visual{position:absolute;inset:0}.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,#050504ee 100%)}.web{background-image:linear-gradient(180deg,#0001 20%,#050504ee 100%),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85");background-size:cover;background-position:center}.web:before{content:"";position:absolute;width:75%;height:48%;left:13%;top:14%;background:#09090866;border:1px solid #d1ad6b55;box-shadow:0 40px 80px #0008;transform:rotate(-4deg);backdrop-filter:blur(1px)}.app{background-image:linear-gradient(180deg,#0001 15%,#050504ee 100%),url("https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=85");background-size:cover;background-position:center}.app:before{content:"";position:absolute;width:175px;height:360px;left:50%;top:10%;transform:translateX(-50%) rotate(6deg);border:5px solid #29251f;border-radius:28px;background:#0a090899;box-shadow:0 35px 70px #000;backdrop-filter:blur(2px)}.ai{background-image:linear-gradient(180deg,#0001 10%,#050504ee 100%),url("https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85");background-size:cover;background-position:center}.ai:before{content:"AI";position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);width:185px;height:185px;border:1px solid #d1ad6b88;border-radius:50%;display:grid;place-items:center;font:500 36px "Cormorant Garamond";color:var(--gold);background:#11100b99;box-shadow:0 0 90px #d1ad6b44}.system{background-image:linear-gradient(180deg,#0002 10%,#050504ee 100%),url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85");background-size:cover;background-position:center}.system:before{content:"84.7%   2,481   −38%";position:absolute;left:9%;right:9%;top:27%;height:50%;padding:35px 25px;border-top:1px solid #d1ad6b33;color:#e7dfd0;font:500 35px "Cormorant Garamond";word-spacing:25px}.experience{background-image:linear-gradient(180deg,#0001 15%,#050504ee 100%),url("https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85");background-size:cover;background-position:center}.experience:before{content:"";position:absolute;width:430px;height:430px;border:1px solid #d1ad6b66;border-radius:50%;left:53%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 60px #d1ad6b08,0 0 0 120px #d1ad6b05}.info{position:absolute;z-index:3;left:30px;right:30px;bottom:27px;display:flex;justify-content:space-between;align-items:end}.info small{display:block;color:#cdb37e;font-size:7px;letter-spacing:.2em;margin-bottom:9px}.info h3{font:500 38px "Cormorant Garamond";margin:0}.info p{font-size:9px;color:#8c877d;margin:7px 0 0}.arrow{width:45px;height:45px;border:1px solid #d1ad6b77;border-radius:50%;display:grid;place-items:center;color:var(--gold)}.card:hover .arrow{background:var(--gold);color:#080706}.services{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.service{padding:27px 10px;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:center;transition:.3s}.service:hover{padding-left:24px;background:#0d0d0b}.service .n{color:#6f6a61;font-size:8px}.service strong{font:500 29px "Cormorant Garamond";margin-left:auto}.service span:last-child{color:#777269;font-size:8px;max-width:145px}.process{background:#eee9de;color:#111}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #1112}.step{padding:30px 24px;border-right:1px solid #1112;min-height:220px}.step b{font:500 40px "Cormorant Garamond";color:#8a6c3b}.step h3{font:500 25px "Cormorant Garamond";margin:35px 0 8px}.step p{font-size:9px;line-height:1.7;color:#6c685f}.contactBox{border:1px solid #d1ad6b55;padding:65px 7vw;background:linear-gradient(115deg,#0d0c09,#17130d);overflow:hidden;position:relative}.contactBox h2{font:500 clamp(58px,8vw,110px)/.8 "Cormorant Garamond";margin:0}.contactBox h2 i{color:var(--gold)}.contactLinks{display:flex;gap:35px;flex-wrap:wrap;margin-top:40px;color:#bbb3a3;font-size:9px}.contactLinks a:hover{color:var(--gold)}footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-content:space-between;color:#69645b;font-size:8px;letter-spacing:.1em;text-transform:uppercase}.modal{position:fixed;inset:0;z-index:80;background:#050504ee;display:none;align-items:center;justify-content:center;padding:25px}.modal.open{display:flex}.modalIn{width:min(1150px,100%);max-height:90vh;overflow:auto;padding:45px;background:linear-gradient(145deg,#11110f,#080807);border:1px solid #d1ad6b55}.modalTop{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.modalActions{display:flex;gap:8px;align-items:center}.homeBtn{background:none;border:1px solid #d1ad6b55;color:var(--gold);padding:9px 12px;cursor:pointer;font-size:8px;letter-spacing:.12em}.homeBtn:hover{background:var(--gold);color:#080706}.modalTop h3{font:500 50px "Cormorant Garamond";margin:7px 0 0}.close{background:none;border:1px solid #fff3;color:#fff;padding:9px 12px;cursor:pointer}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:30px}.project{min-height:230px;border:1px solid #d1ad6b33;padding:28px;display:flex;flex-direction:column;justify-content:end;background:radial-gradient(circle at 75% 20%,#80603b44,transparent 35%),linear-gradient(135deg,#0d100e,#211e18);transition:.3s}.project:hover{transform:translateY(-5px);border-color:#d1ad6b88;color:inherit}.project{position:relative;overflow:hidden;background-color:#0b0b09;background-repeat:no-repeat;min-height:260px}.projectShade{position:absolute;inset:0;background:linear-gradient(180deg,#0001 10%,#050504ee 100%);z-index:1;pointer-events:none}.project small,.project strong,.projectLink{position:relative;z-index:2}.project:hover{background-size:106% 106%;color:inherit}.projectLink{color:#d1ad6b;font-size:8px;letter-spacing:.14em;text-transform:uppercase}.project small{color:#d1ad6b;font-size:7px;letter-spacing:.16em}.project strong{font:500 35px "Cormorant Garamond";margin:9px 0}.projectLink{color:#d1ad6b;font-size:8px;letter-spacing:.14em;text-transform:uppercase}@media(max-width:900px){.heroIn{grid-template-columns:1fr}.stage{margin-top:30px}.grid{grid-template-columns:1fr}.card.big{grid-row:auto;min-height:650px}.services{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}}@media(max-width:600px){.links{display:none}.hero h1{font-size:75px}.laptop{width:480px;left:-5%}.phone{right:0}.head{display:block}.head p{margin-top:25px}.steps{grid-template-columns:1fr}.modalIn{padding:25px}}
+</style>
+</head>
+<body>
+<div class="intro" id="intro">
+  <div class="introGlow"></div>
+  <div class="introContent">
+    <div class="introLine"></div>
+    <div class="introKicker">ATELIER NORTH · DIGITAL STUDIO</div>
+    <div class="introTitle">Built to <em>look</em> expensive.</div>
+    <div class="introSub">WEBSITES · APPS · AI · DIGITAL SYSTEMS</div>
+    <div class="introProgress"><span></span></div>
+  </div>
+  <button class="skip" onclick="finishIntro()">SKIP INTRO →</button>
+</div>
+<nav class="nav"><a class="brand" href="#">ATELIER <b>NORTH</b></a><div class="links"><a href="#work">Work</a><a href="#capabilities">Services</a><a href="#process">Process</a><a href="#contact">Contact</a></div><button class="cta" onclick="goContact()">Start a project ↗</button></nav>
+<header class="hero"><div class="heroIn"><div><div class="eyebrow">Independent digital studio · 2026</div><h1>Built to<br><em>look</em><br>expensive.</h1><p class="copy">Atelier North creates high-end websites, apps, AI automations and digital systems for businesses that refuse to look ordinary.</p><div class="buttons"><a class="gold" href="#work">Explore selected work</a><a class="outline" href="#contact">Tell us what you're building ↗</a></div></div><div class="stage"><div class="glow"></div><div class="laptop"><div class="screen"><small>ATELIER NORTH / SELECTED WORK</small><h2>Digital products<br><i>made remarkable.</i></h2></div></div><div class="phone"><div class="phoneIn"><small>ATELIER / MOBILE</small><h3>Built for<br>the future.</h3></div></div></div></div></header>
+<section class="section" id="work"><div class="head"><div><div class="kicker">01 / Selected work</div><h2>Make the work<br>do the talking.</h2></div><p>Explore the actual demos by discipline. Each category opens a premium project gallery with direct live-demo links.</p></div><div class="grid">
+<article class="card big" onclick="openCategory('websites')"><div class="visual web"></div><div class="info"><div><small>01 / 05 · SELECTED WORK</small><h3>Websites</h3><p>Immersive digital identities built to create trust.</p></div><span class="arrow">↗</span></div></article>
+<article class="card" onclick="openCategory('apps')"><div class="visual app"></div><div class="info"><div><small>02 / 05 · PRODUCT</small><h3>Apps</h3><p>Premium mobile experiences.</p></div><span class="arrow">↗</span></div></article>
+<article class="card" onclick="openCategory('ai')"><div class="visual ai"></div><div class="info"><div><small>03 / INTELLIGENCE</small><h3>AI & Automation</h3><p>Systems that work while you sleep.</p></div><span class="arrow">↗</span></div></article>
+<article class="card" onclick="openCategory('systems')"><div class="visual system"></div><div class="info"><div><small>04 / OPERATIONS</small><h3>Business Systems</h3><p>Dashboards, portals and internal tools.</p></div><span class="arrow">↗</span></div></article>
+<article class="card" onclick="openCategory('experiences')"><div class="visual experience"></div><div class="info"><div><small>05 / EXPERIMENTAL</small><h3>Interactive Experiences</h3><p>Motion, product interaction and digital moments.</p></div><span class="arrow">↗</span></div></article>
+</div></section>
+<section class="section" id="capabilities"><div class="head"><div><div class="kicker">02 / Capabilities</div><h2>One studio.<br>Many disciplines.</h2></div><p>Web, apps, AI and business systems — presented as one premium digital offering.</p></div><div class="services">
+<div class="service"><span class="n">01</span><strong>Web Development</strong><span>High-end business websites.</span></div><div class="service"><span class="n">02</span><strong>App Development</strong><span>Premium product experiences.</span></div><div class="service"><span class="n">03</span><strong>AI Business Automation</strong><span>Automate repetitive workflows.</span></div><div class="service"><span class="n">04</span><strong>Business Dashboard</strong><span>Operational visibility.</span></div><div class="service"><span class="n">05</span><strong>Client Portal</strong><span>Private customer workspaces.</span></div><div class="service"><span class="n">06</span><strong>AI Customer Support</strong><span>Intelligent customer conversations.</span></div><div class="service"><span class="n">07</span><strong>CRM</strong><span>Centralize customer operations.</span></div><div class="service"><span class="n">08</span><strong>Membership Platform</strong><span>Gated digital experiences.</span></div><div class="service"><span class="n">09</span><strong>Interactive Product Configurator</strong><span>Interactive customization.</span></div><div class="service"><span class="n">10</span><strong>Digital Kiosk</strong><span>Modern self-service interfaces.</span></div>
+</div></section>
+<section class="process" id="process"><div class="section"><div class="head"><div><div class="kicker">03 / Process</div><h2>Quietly obsessive.<br>Exceptionally clear.</h2></div><p>Simple for the client. Thorough behind the scenes.</p></div><div class="steps"><div class="step"><b>01</b><h3>Discover</h3><p>Understand the business, audience, goals and opportunity.</p></div><div class="step"><b>02</b><h3>Art-direct</h3><p>Create a distinctive visual and interaction direction.</p></div><div class="step"><b>03</b><h3>Build</h3><p>Turn the approved direction into a responsive product.</p></div><div class="step"><b>04</b><h3>Launch</h3><p>Polish, test and deliver something worth showing.</p></div></div></div></section>
+<section class="section" id="contact"><div class="contactBox"><div class="kicker">04 / Start a conversation</div><h2>Have something<br><i>worth building?</i></h2><div class="contactLinks"><a href="mailto:riyaz.csee@gmail.com">riyaz.csee@gmail.com ↗</a><a href="tel:+919080292231">+91 90802 92231 ↗</a><a href="https://wa.me/919080292231" target="_blank">WhatsApp ↗</a></div></div></section>
+<footer><span>© 2026 Atelier North</span><span>Web · Apps · AI · Digital Systems</span></footer>
+<div class="modal" id="modal"><div class="modalIn"><div class="modalTop"><div><div class="kicker" id="modalKicker">Selected work</div><h3 id="modalTitle">Websites</h3></div><div class="modalActions"><button class="homeBtn" onclick="goHome()">← HOME</button><button class="close" onclick="closeModal()">CLOSE ×</button></div></div><div class="projects" id="projects"></div></div></div>
+<script>
+const categories={
+websites:[
+['NOVA','Spaces That Feel Like You','https://riyazcodes78.github.io/interior-design-studio/'],
+['VELORA','Beauty, Refined','https://riyazcodes78.github.io/Luxury-Salon/'],
+['EMBER & OAK','Modern Dining','https://riyazcodes78.github.io/Restuarant/'],
+['LUMIERE','Wedding Stories, Beautifully Remembered','https://riyazcodes78.github.io/Photography/'],
+['FORM','Train WIth Intension','https://riyazcodes78.github.io/Private-Fitness-Studio/']
+],
+apps:[
+['LUMIERE','Premium Beauty Experience','https://riyazcodes78.github.io/Lumiere-app-demo/'],
+['FITFLOW','Premium Fitness Experience','https://riyazcodes78.github.io/FitFlow-app-demo/'],
+['EMBEROAK','Premium Dining Experience','https://riyazcodes78.github.io/EmberOak-App-demo/'],
+['CARECONNECT','Connected Care Experience','https://riyazcodes78.github.io/CareConnect-App-demo/'],
+['STARLY','Premium App Experience','https://riyazcodes78.github.io/CareConnect-App-demo/']
+],
+ai:[
+['FlowPilot','AI Business Automation','https://riyazcodes78.github.io/FlowPilot-Business-Automation/'],
+['AI Customer Support','Intelligent Customer Support','https://riyazcodes78.github.io/AI-Customer-Support-demo/']
+],
+systems:[
+['Insight Dashboard','Business intelligence dashboard','https://riyazcodes78.github.io/Insight-Dashboard-demo/'],
+['Client Portal','Premium client workspace','https://riyazcodes78.github.io/Client-Portal-demo/'],
+['CRM','Customer relationship management','https://riyazcodes78.github.io/CRM-demo/'],
+['Membership Platform','Premium membership experience','https://riyazcodes78.github.io/Membership-Platform-demo/'],
+['Digital Kiosk','Self-service digital interface','https://riyazcodes78.github.io/Digital-kiosk/']
+],
+experiences:[
+['Interactive Product Configurator','Interactive product customization','https://riyazcodes78.github.io/Interactive-Product-Configurator-demo/']
+]
+};
+
+const titles={websites:'Websites',apps:'Apps',ai:'AI & Automation',systems:'Business Systems',experiences:'Interactive Experiences'};
+function openCategory(key){
+  document.getElementById('modalTitle').textContent=titles[key];
+  document.getElementById('modalKicker').textContent='Atelier North / '+titles[key];
+
+  const box=document.getElementById('projects');
+  box.innerHTML='';
+
+  const projectImages={
+    'NOVA':'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85',
+    'VELORA':'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85',
+    'EMBER & OAK':'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85',
+    'LUMIERE':'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=85',
+    'FORM':'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85',
+    'FITFLOW':'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85',
+    'EMBEROAK':'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85',
+    'CARECONNECT':'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=85',
+    'STARLY':'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=85',
+    'FlowPilot':'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85',
+    'AI Customer Support':'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=85',
+    'Insight Dashboard':'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85',
+    'Client Portal':'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=85',
+    'CRM':'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85',
+    'Membership Platform':'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85',
+    'Digital Kiosk':'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=85',
+    'Interactive Product Configurator':'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85'
+  };
+
+  categories[key].forEach((p,i)=>{
+    const el=document.createElement('a');
+    el.className='project';
+    el.href=p[2];
+    el.target='_self';
+    el.rel='noopener noreferrer';
+
+    const img=projectImages[p[0]] ||
+      'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85';
+
+    el.style.backgroundImage=
+      "linear-gradient(180deg,#0001 10%,#050504ee 100%),url('"+img+"')";
+    el.style.backgroundSize='cover';
+    el.style.backgroundPosition='center';
+
+    el.innerHTML=
+      '<div class="projectShade"></div>'+
+      '<small>'+String(i+1).padStart(2,'0')+' / '+p[1]+'</small>'+
+      '<strong>'+p[0]+'</strong>'+
+      '<span class="projectLink">Open live demo ↗</span>';
+
+    box.appendChild(el);
+  });
+
+  document.getElementById('modal').classList.add('open');
+}
+
+function goHome(){
+  closeModal();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function closeModal(){document.getElementById('modal').classList.remove('open')}function goContact(){document.getElementById('contact').scrollIntoView({behavior:'smooth'})}document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});function finishIntro(){
+  const x=document.getElementById('intro');
+  if(!x)return;
+  x.classList.add('hide');
+  setTimeout(()=>{
+    x.remove();
+    window.scrollTo(0,0);
+  },900);
+}
+
+/* Automatic intro transition — existing intro remains unchanged */
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    if (typeof finishIntro === 'function') finishIntro();
+  }, 3500);
+});
+</script>
+</body></html>
